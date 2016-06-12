@@ -1,0 +1,1 @@
+adb shell killall com.android.commands.monkey
