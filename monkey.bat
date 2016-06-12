@@ -1,4 +1,4 @@
-set cmd="monkey -p com.quick.gamebooster --pct-touch 70 --pct-appswitch 30 --throttle 1000 -v 500"
+set cmd="monkey -p com.quick.gamebooster --pct-touch 40 --pct-motion 10 --pct-appswitch 40 --pct-anyevent 10 --throttle 1000 --bugreport -v 500"
 echo %cmd%
-adb shell %cmd%
+adb shell %cmd% 
 
