@@ -32,4 +32,12 @@ rem ) else (
 rem 	echo "No crashes!"
 rem ) 
 
+findstr "CRASH:" %logFile% > crash.txt
+for /f %%i in ("crash.txt") do set size=%%~zi
+@if %size% gtr 0 (
+	echo Has Crash!
+) else (
+	echo  No Crash!
+)
+
 pause
