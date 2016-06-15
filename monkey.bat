@@ -1,9 +1,9 @@
 :: 设置包名
 set packageName=com.quick.gamebooster
 :: 事件之间的时间间隔，默认为500ms
-set eventTime=500
+set eventTime=200
 :: 事件个数
-set eventCount=100
+set eventCount=5000
 
 :: 根据日期时间设置monkey的log目录
 set hour=%time:~0,2%
