@@ -12,6 +12,7 @@ echo hour:%hour%
 set outDir=gb_%year%%month%%day%_%hour%%minute%
 echo %outDir%
 
+adb shell mkdir /sdcard/%outDir%
 adb shell "run-as %packageName% cp -r /data/data/%packageName%" /sdcard/%outDir%
 adb pull /sdcard/%outDir%  %outDir%
 adb shell rm -rf /sdcard/%outDir%

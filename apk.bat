@@ -1,3 +1,2 @@
-@echo apk tool:
-@echo 	-i : adb install -r PACKAGE
-@if "%1" == "-i" adb install -r %2 
+@if "%1" == "-i" adb install -r -d %2 
+@if "%1" == "-r" adb uninstall %2
