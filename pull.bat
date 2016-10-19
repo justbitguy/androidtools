@@ -1,4 +1,4 @@
-set packageName=com.quick.gamebooster
+set packageName=com.player.spider
 
 set year=%date:~2,2%
 set month=%date:~5,2%

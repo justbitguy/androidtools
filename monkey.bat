@@ -1,9 +1,9 @@
 :: 设置包名
-set packageName=com.quick.gamebooster
+set packageName=com.player.spider
 :: 事件之间的时间间隔，默认为500ms
 set eventTime=200
 :: 事件个数
-set eventCount=5000
+set eventCount=500000
 
 :: 根据日期时间设置monkey的log目录
 set hour=%time:~0,2%
@@ -26,7 +26,7 @@ if "%day:~0,1%" == " " set day=0%day:~1,1%
 set logFile=monkey_%year%%month%%day%_%hour%%min%.txt
  
 :: 开始执行monkey命令
-set cmd="monkey -p %packageName% --pct-touch 40 --pct-motion 10 --pct-appswitch 40 --pct-anyevent 10 --throttle %eventTime% --ignore-crashes --ignore-timeouts --ignore-security-exceptions --script-log -v %eventCount%"
+set cmd="monkey -p %packageName% --pct-touch 40 --pct-motion 10 --pct-appswitch 40 --pct-anyevent 10 --throttle %eventTime% --ignore-crashes --ignore-timeouts --ignore-security-exceptions --script-log -v --pct-syskeys 0  %eventCount%"
 echo %cmd%
 adb shell %cmd% > %logFile%
 
